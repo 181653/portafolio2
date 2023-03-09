@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1 align="center">Cinepolis</h1>
+    <form metohd="post" action="" enctype="text/plain">
+        <fieldset>
+            <legend>Información del Cliente</legend>
+
+            <label for="Nombre">Nombre: </label><br>
+            <input type="text" name="nombre" id="nombre" maxlength="12" placeholder="Nombre" 
+            size="15" title="Nombre" required/><br>
+
+            <label for="Nombre">Nombre de usuario: </label><br>
+            <input type="text" name="usuario" id="usuario" maxlength="12" placeholder="Usuario" 
+            size="15" title="Nombre"/><br>
+
+            <label for="Nombre">Apellido Paterno: </label><br>
+            <input type="text" name="Apellido" id="Apellido Paterno" maxlength="12" placeholder="Apellido Paterno" 
+            size="15" title="ApellidoP" required /><br>
+
+            <label for="Nombre">Apellido Materno: </label><br>
+            <input type="text" name="Apellido" id="Apellido Materno" maxlength="12" placeholder="Apellido Materno" 
+            size="15" title="ApellidoM" required /><br>
+
+            <label for="pass">Contraseña:</label><br>
+            <input type="password" name="pass" id="pass" maxlength="15" placeholder="¨Password"  /><br>
+        </fieldset>
+    </form>
+
+    <form metohd="post" action="" enctype="text/plain">
+        <fieldset>
+            <legend>Seleccione una pelicula</legend>
+
+            <h3>Seleccione la cantidad de boletos que decea comprar (Maximo 6 boletos por compra)</h3>
+
+            <h3>Voletos</h3>
+            <select  size="5" multiple>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 </option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select><br>
+
+            <h3>Peliculas</h3>
+                    <select  size="5" multiple>
+                        <option value="1">La ballena</option>
+                        <option value="2">scream 6</option>
+                        <option value="3">shazam </option>
+                        <option value="4">EO</option>
+                        <option value="5">El Gato con botas</option>
+                        <option value="6">Atman 3</option>
+                    </select><br>
+
+                    <h3>Seleccione el dia y la fecha en la que desa ver su pelicula:</h3>
+                    <label for="fechahora">Fecha y Hora:</label><br>
+                    <input type="datetime-local" name="fechahora" id="fechahora"><br>
+
+                    <h3>Tipo de sala</h3>
+
+                    <input type="radio" name="sala" id="sala" value="c" checked>
+                    <label for="sala1" >Cinépolis Macro XE</label><br>
+
+                    <input type="radio" name="sala" id="sala" value="c" checked>
+                    <label for="sala1" >Cinépolis Junior</label><br>
+
+                    <input type="radio" name="sala" id="sala" value="c" checked>
+                    <label for="sala1" >Cinépolis 4DX</label><br>
+
+                    <input type="radio" name="sala" id="sala" value="c" checked>
+                    <label for="sala1" >Cinépolis IMAX</label><br>
+
+                    <input type="radio" name="sala" id="sala" value="c" checked>
+                    <label for="sala1" >Cinépolis Pluus</label><br>
+
+                    <input type="radio" name="sala" id="sala" value="c" checked>
+                    <label for="sala1" >Sala de Arte</label><br>
+
+                    <h3>Seleccione los Alimentos que decea comprar:</h3>
+                    <input type="checkbox" name="forma1" id="forma1" value="tdc" checked>
+                    <label for="forma1">Palomitas</label><br>
+
+                    <input type="checkbox" name="forma1" id="forma1" value="tdc" checked>
+                    <label for="forma1">Refresco</label><br>
+
+                    <input type="checkbox" name="forma1" id="forma1" value="tdc" checked>
+                    <label for="forma1">Ice</label><br>
+
+                    
+                    <input type="checkbox" name="forma1" id="forma1" value="tdc" checked>
+                    <label for="forma1">Chocolates</label><br>
+
+                    <input type="checkbox" name="forma1" id="forma1" value="tdc" checked>
+                    <label for="forma1">Nachos</label><br>
+
+                    <h3>Seleccione el color de su palomera personalisada:</h3>
+                   <labe for="colores">Selecciona un Color:</labe><br>
+                   <input type="color" name="colores" id="colores"><br>
+
+                   <h3>Metodo de pago</h3>
+                    <input type="checkbox" name="forma" id="forma" value="tdc" checked>
+                    <label for="forma">Tarjeta de credito</label><br>
+                   
+                    <input type="checkbox" name="forma2" id="forma2" value="efe">
+                    <label for="forma2">Efectivo</label><br> 
+
+                    <input type="checkbox" name="forma3" id="forma3" value="tdd">
+                    <label for="forma3">Tarjeta de debito</label><br>
+        </fieldset>
+    </form>
+
+
+    <form metohd="post" action="" enctype="text/plain">
+        <fieldset>
+            <legend>Datos de la Facturacion</legend>
+
+            <label for="Nombre">Calle: </label><br>
+            <input type="text" name="Calle" id="Calle" maxlength="12" placeholder="Calle" 
+            size="15" title="Calle" /><br>
+
+            <label for="correo">E-mail</label><br>
+            <input type="email" name="correo" id="correo" placeholder="E-mail" required><br>
+
+            <label for="Nombre">Num: </label><br>
+            <input type="text" name="Numero" id="Numero" maxlength="12" placeholder="Num Exterior" 
+            size="15" title="Num" /><br>
+
+            <label for="Nombre">Colonia: </label><br>
+            <input type="text" name="Colonia" id="Colonia" maxlength="12" placeholder="Colonia" 
+            size="15" title="Colonia" /><br>
+
+            <label for="Nombre">Codigo Postal: </label><br>
+            <input type="text" name="C.P" id="C.P" maxlength="12" placeholder="C.P" 
+            size="15" title="C.P" /><br>
+
+            <label for="Nombre">RFC: </label><br>
+            <input type="text" name="RFC" id="RFC" maxlength="12" placeholder="RFC" 
+            size="15" title="RFC" required /><br>
+        </fieldset>
+    </form>
+
+    <form metohd="post" action="" enctype="text/plain">
+        <fieldset>
+            <legend>Encuesta de satisfaccion</legend>
+            <label for="servicio">¿como le parecio el servicio de compra?:</label><br>
+            <input type="range" name="servicio" min="1" max="10" value="7"><br>
+
+            <label for="sugiere">Deje sus sujerencias</label><br>
+            <textarea name="sugiere" rows="10" cols="25" ></textarea><br/>
+            
+            <input type="submit" name="enviar" id="enviar" value="Enviar Datos">
+
+            <input type="reset" name="borrar" id="borrar" value="Borrar Datos">
+        </fieldset>
+    </form>
+
+</body>
+</html>
