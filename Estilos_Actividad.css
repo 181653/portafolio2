@@ -1,0 +1,53 @@
+*{
+  background-color:aqua;
+}
+
+h2{
+    color:blue;
+    background-color: cyan;
+}
+h2:first-child{
+    color: blueviolet;
+}
+#Titulo1{
+    color:rgb(104, 21, 182);
+    font-size: 25px
+}
+
+#parrafo1{
+    color: rgb(238, 0, 0);
+    text-align: justify;
+    font-size: 20px;
+    background-color:darkgray
+}
+
+#parrafo2{
+    color: rgb(255, 0, 0);
+    text-align: justify;
+    font-size: 20px;
+    background-color: darkgrey;
+}
+
+#uno{
+    background-color:darkgrey;
+}
+
+#dos{
+    background-color:darkgrey;
+}
+#parrafo3{
+    background-color: darkgray;
+}
+
+#parrafo4{
+    background-color: darkgray;
+}
+#tres{
+    background-color: darkgray;
+}
+#cuatro{
+    background-color: darkgray;
+}
+#cinco{
+    background-color: darkgray;
+}
