@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menú Desplegable con Submenús en Forma de Lista</title>
+  <style>
+  
+@font-face{
+    font-family: "Letra1";
+    src: url("VT323-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family: "Letra2";
+    src: url("Zeyada-Regular.ttf") format("truetype");
+}
+  .container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #93cdc3; /* color de fondo del cuadro */
+  padding: 10px;
+  width: 300px; /* ancho del cuadro */
+  margin-top: 15px; /* margen de separación de arriba */
+  margin-right: 15px; /* margen de separación de la derecha */
+  border-radius: 10px; /* borde redondeado del cuadro */
+  font-family: 'Letra1';
+  font-size: xx-large;
+}
+
+.text {
+  color: black;
+  text-align: center; /* centrar el texto horizontalmente */
+}
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #a2d2e5;
+      padding: 10px;
+      font-family: 'Letra2';
+      font-size: xx-large;
+      margin-right: 15px; /* margen de separación de la derecha */
+     border-radius: 10px; /* borde redondeado del cuadro */
+     margin-top: 15px; /* margen de separación de arriba */
+    }
+    
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .menu li {
+      display: inline;
+      margin-right: 5px;
+      position: relative; 
+    }
+    
+    .menu a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 5px;
+    }
+    
+    .menu a:hover {
+      background-color: #333;
+      color: #f8f8f8;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #d14848;
+      padding: 5px;
+      left: 0; 
+      top: 100%; 
+    }
+    
+    .submenu ul {
+      list-style-type: none; 
+      padding: 0;
+      margin: 0;
+    }
+    
+    .submenu li {
+        color: black;
+      margin-bottom: 5px; 
+    }
+    
+    .menu li:hover .submenu {
+      display: block;
+    }
+  </style>
+</head>
+<body background="imagen/playa.jpg" style="background-repeat:no-repeat ;background-size: 100%;background-attachment: fixed;">
+    
+    <div class="container">
+        <p class="text">Lo mejor de la playa</p>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="1">Servicios que se ofrecen</a>
+            <ul class="submenu">
+              <li><a href="2">Hospedaje</a></li>
+              <li><a href="3">Restaurante</a></li>
+              <li><a href="4">Gimnasio</a></li>
+              <li><a href="5">Alberca</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+</body>
+</html>
