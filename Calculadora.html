@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="imagen/jpg" href="imagen/ups.jpg"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <script src="scriptcalculadora.js"></script>
+        <title>CalculadoraJAVA</title>
+        <style>
+            body{
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                text-align: center;
+            }
+            form{
+                background-color: rgba(255, 69, 69, 0.753);
+            }
+        </style>
+    </head>
+<style>
+    body{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+
+    form{
+        background-color: rgba(215, 73, 73, 0.753);
+    }
+</style>
+<body>
+    <form action="" method="post">
+
+        <br><label for="num1">Escribe un numero</label>
+        <br><input type="text" id="num1">
+
+        <br><label for="num2">Escribe otro numero</label>
+        <br><input type="text" name="" id="num2">
+
+        <br><br><input type="button" value="Sumar" onclick="suma()">
+        <input type="button" value="Restar" onclick="resta()">
+        <input type="button" value="Multiplicacion" onclick="mult()">
+        <input type="button" value="Division" onclick="div()">
+    </form>
+
+    <h2>El resultado es:</h2>
+    <p id="result"></p>
+
+
+</body>
+</html>
