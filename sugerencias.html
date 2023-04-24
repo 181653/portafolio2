@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<link rel="icon" type="image/png" href="imagenes/logito.jpg"/>
     <meta charset="UTF-8">
     <title>Quejas y sugerencias</title>
   </head>
   <body background="imagenes/poro.jpg" style="background-repeat:no-repeat ;background-size: 100%;background-attachment: fixed;">
     <h1>Quejas y sugerencias</h1>
-    <p>¡Gracias por tomarse el tiempo de proporcionar sus comentarios! Si tiene alguna queja o sugerencia sobre nuestra página web, complete el siguiente formulario y háganoslo saber.</p>
     <form>
-      <label for="nombre">Nombre:</label><br>
-      <input type="text" id="nombre" name="nombre"><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
       <label for="comentario">Comentario:</label><br>
-      <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
-      <input type="submit" value="Enviar">
+      <textarea id="comentario" name="comentario" rows="5" cols="50"></textarea><br><br>
+      
+      <button type="button" onclick="guardarComentario()">Guardar Comentario</button>
     </form>
+  
+    <script>
+      function guardarComentario() {
+        var nombre = document.getElementById("nombre").value;
+        var email = document.getElementById("email").value;
+        var comentario = document.getElementById("comentario").value;
+        var fecha = new Date();
+        var archivo = new File([nombre, email, comentario, fecha], "comentario.txt", {type: "text/plain;charset=utf-8"});
+        saveAs(archivo);
+        alert("Tu comentario ha sido guardado con éxito!");
+        document.getElementById("nombre").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("comentario").value = "";
+      }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
     <h2 align="left">Contenido</h2>
     <ol type="1" >
 			<li><a href="https://181653.github.io/portafolio2/avance" target="frame1">Inicio</a></li>
