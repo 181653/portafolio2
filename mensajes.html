@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: black;
+            padding: 10px;
+            z-index: 9999;
+        }
+        
+       
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        
+        
+        h3 {
+            text-align: center; 
+        }
+        form {
+            margin: 70px auto 0;
+            max-width: 500px; 
+            background-color: white;
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+        }
+        input[type="text"], input[type="email"], textarea {
+            display: block; 
+            margin-bottom: 10px; 
+            width: 100%; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+        }
+        input[type="submit"] {
+            background-color: #1E90FF; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            box-sizing: border-box; 
+            width: 100%; 
+        }
+        input[type="submit"]:hover {
+            background-color: #008B8B;
+        }
+    </style>
+    
+</head>
+<body background="imagenes/poro.jpg" style="background-repeat:no-repeat ;background-size: 100%;background-attachment: fixed;">
+  
+    <div class="navbar">
+        <a href="https://181653.github.io/portafolio2/avance" target="frame1">Inicio</a>
+        <a href="https://181653.github.io/portafolio2/skins" target="frame1">SKins</a>
+        <a href="https://181653.github.io/portafolio2/items" target="frame1">Items</a>
+        <a href="https://181653.github.io/portafolio2/Multimedia" target="frame1">Multimedia</a>
+        <a href="https://181653.github.io/portafolio2/lore" target="frame1">Lore</a>
+        <a href="https://181653.github.io/portafolio2/sugerencias" target="frame1">Sugerencias</a>
+        <a href="https://181653.github.io/portafolio2/preguntas" target="frame1">preguntas</a>
+        <a href="https://181653.github.io/portafolio2/mensajes" target="frame1">mensaje</a>
+    </div>
+    <h3>Registro de usuarios</h3>
+    <div>
+        <form action="mensajero.php" method="post">
+        <label for="nombre">Nombre del usuario</label>
+        <input type="text" id="nombre" name="nombre", placeholder="User">
+
+        <label for="email">E-Mail</label>
+        <input type="email" id="emil" name="email" placeholder="Email">
+
+        <label for="mensaje">Comentario</label>
+        <textarea name="mensaje" id="mensaje"></textarea>
+
+        <input type="submit" id="submit" name="submit" value="Enviar formulario">
+    </form>
+    </div>
+</body>
+</html>
