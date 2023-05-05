@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generador de RFC</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="practica4.css">
+</head>
+<body>
+	<h1>Generador de RFC</h1>
+	<form>
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" required>
+
+		<label for="apellidoPaterno">Apellido Paterno:</label>
+		<input type="text" id="apellidoPaterno" required>
+
+		<label for="apellidoMaterno">Apellido Materno:</label>
+		<input type="text" id="apellidoMaterno" required>
+
+		<label for="fechaNacimiento">Fecha de Nacimiento:</label>
+		<input type="text" id="dia" placeholder="Día" required>
+		<input type="text" id="mes" placeholder="Mes" required>
+		<input type="text" id="ano" placeholder="Año" required>
+
+		<input type="button" value="Generar RFC" onclick="generarRFC()">
+	</form>
+	<p id="rfc"></p>
+
+	<script src="practica4.js"></script>
+</body>
+</html>
