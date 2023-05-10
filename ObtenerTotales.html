@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Se define el título de la página -->
+	<title>Obtener totales del formulario</title>
+	
+	<!-- Se importa un archivo CSS para definir estilos en la página -->
+    <link rel="stylesheet" href="estilos.css">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<!-- Se importan dos fuentes de Google Fonts para usar en la página -->
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+</head>
+
+<script>
+// Se define una variable global llamada "total"
+var total;
+
+// Se define una función llamada "califica"
+function califica()
+{
+    // Se define una variable local llamada "total" y se inicializa en 0
+    var total=0;
+    
+    // Se itera sobre cada pregunta del formulario, de la 1 a la 4
+    for (var x=1;x<=4;x++)
+    {
+        // Se define una variable local llamada "res" y se inicializa en 0
+        var res=0;
+        
+        // Se construye el nombre del grupo de botones de opción de la pregunta actual
+        var nom="r"+x;
+        
+        // Se obtienen los botones de opción del grupo actual
+        var resul=document.getElementsByName(nom);
+        
+        // Se itera sobre los botones de opción para encontrar cuál ha sido seleccionado
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        
+        // Se actualiza el valor de la variable "total" sumándole el resultado de la pregunta actual
+        total=total+res;
+        
+        // Se actualiza el texto del elemento HTML con ID "total" para mostrar el puntaje acumulado
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+    }
+    
+    // Se utiliza un bloque condicional para mostrar un mensaje según el puntaje obtenido
+    if(total==20)
+        document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+    else if(total==15)
+        document.getElementById("comentario").innerHTML="Regular!!";
+    else if(total<=15)
+        document.getElementById("comentario").innerHTML="Estudia un poco más";
+}
+</script>
+
+<body>
+    <!-- Se crea un contenedor principal para los elementos de la página -->
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Tu opinión es importante</h2>
+    
+    <!-- Se crea un formulario con preguntas de opción múltiple -->
+    <form>
+        <div>
+            <ul>
+                <li>Pregunta 1: ¿cuanto es 2+2?</li>
+                <input type="radio" name="r1" id="r1" value="5"/>4<br/>
+                <input type="radio" name="r1" id="r1" value="0"/>2<br/>
+                <input type="radio" name="r1" id="r1" value="0"/>3<br/>
+                <input type="radio" name="r1" id="r1" value="0"/>
+
+				<li>Pregunta 2: ¿cuanto es 2-2?</li>
+				<input type="radio" name="r2" id="r2" value="5"/>0<br/>
+				<input type="radio" name="r2" id="r2" value="0"/>7<br/>
+				<input type="radio" name="r2" id="r2" value="0"/>9<br/>
+				<input type="radio" name="r2" id="r2" value="0"/>6<br/>
+
+				<li>Pregunta 3: ¿cuanto es 2/2?</li>
+				<input type="radio" name="r3" id="r3" value="5"/>1<br/>
+				<input type="radio" name="r3" id="r3" value="0"/>6<br/>
+				<input type="radio" name="r3" id="r3" value="0"/>2<br/>
+				<input type="radio" name="r3" id="r3" value="0"/>-6<br/>
+
+				<li>Pregunta 4: ¿cuanto es 2*2?</li>
+				<input type="radio" name="r4" id="r4" value="5"/>4<br/>
+				<input type="radio" name="r4" id="r4" value="0"/>5<br/>
+				<input type="radio" name="r4" id="r4" value="0"/>3<br/>
+				<input type="radio" name="r4" id="r4" value="0"/>6<br/>
+				</ul>
+				</div>
+
+<!-- Se crea un botón para calificar las respuestas -->
+<input type="button" value="Calificar" onclick="califica()">
+
+</form>
+
+<!-- Se crean elementos de párrafo para mostrar el puntaje obtenido y el comentario correspondiente -->
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+
+<iframe frameborder="0" width="600" height="500"></iframe>
+
+</div>
+</body>
+</html>
