@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de API Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E6F0FF;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+            background-color: #B3D9FF;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enviar datos a través de una API Form</h1>
+        <h1>API Form</h1>
+        <h2>Con la API Form, puedes crear formularios HTML dinámicos y personalizados en tu sitio web. Te permite agregar campos de entrada, como campos de texto, casillas de verificación, botones de opción, menús desplegables, etc. Además, también puedes definir acciones que se realizarán cuando los usuarios envíen el formulario, como enviar los datos a un servidor o realizar una acción en el cliente.</h2>
+        <h1>Como lo implementaría en mi página</h1>
+        <h2>Se implementaría a manera de formulario donde el usuario dejaría sus datos o comentarios para mejorar la página.</h2>
+        <h2>La API Form utiliza JavaScript para interactuar con los elementos del formulario y gestionar eventos como envío, validación y cambios en los valores de los campos. Puedes acceder a los datos del formulario, validar la entrada del usuario y realizar acciones adicionales basadas en los datos recopilados.</h2>
+
+        <form id="my-form" action="" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone" name="phone"><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        // Agregar un manejador de eventos para el envío del formulario
+        document.getElementById("my-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+            // Datos a enviar a través de la API Form
+            var data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value
+            };
+
+            // Enviar la solicitud HTTP utilizando la biblioteca Fetch de JavaScript
+            fetch("https://api.example.com/form", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer your_api_key"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Imprimir la respuesta de la API en la consola del navegador
+            })
+            .catch(error => {
+                console.error(error); // Manejar cualquier error de la solicitud HTTP
+            });
+        });
+    </script>
+</body>
+</html>
