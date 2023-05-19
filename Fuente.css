@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+
+p {
+    font-family: "fuente";
+    src: url("Fuente01.ttf") format("truetype");
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: "zenya";
+    src: url("Zeyada-Regular.ttf") format("truetype");
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "zenya";
+    src: url("Zeyada-Regular.ttf") format("truetype");
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#mensaje {
+    margin-top: 20px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="fuente.css">
+    <title>Descuento extra</title>
+    <script>
+        function verificarCumple() {
+            var nombre = document.getElementById("nombre").value;
+            var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+            var fechaActual = new Date();
+            var mesActual = fechaActual.getMonth() + 1;
+            
+            var fechaCumple = new Date(fechaNacimiento);
+            var mesCumple = fechaCumple.getMonth() + 1;
+            
+            if (mesCumple === mesActual) {
+                document.getElementById("mensaje").innerHTML = "¡Felicidades, " + nombre + "! ¡Este mes es tu cumpleaños!";
+                document.getElementById("imagen").style.display = "inline"; 
+            } else {
+                document.getElementById("mensaje").innerHTML = "Este mes no es tu cumpleaños!";
+                document.getElementById("imagen").style.display = "none"; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Obten un descuento extra!</h1>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required><br>
+    
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="fechaNacimiento" required><br>
+    
+    <button onclick="verificarCumple()">Verificar</button>
+    
+    <p id="mensaje"></p>
+    
+    <img id="imagen" src="descuento.jpg" style="display: none;">
+</body>
+</html>
